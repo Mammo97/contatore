@@ -1,0 +1,127 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "9fd362ea-70f9-4a90-b589-a06853425fd0",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid decimal literal (3341358199.py, line 12)",
+     "output_type": "error",
+     "traceback": [
+      "  \u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[1]\u001b[39m\u001b[32m, line 12\u001b[39m\n\u001b[31m    \u001b[39m\u001b[31mmargin-top: 100px;\u001b[39m\n                  ^\n\u001b[31mSyntaxError\u001b[39m\u001b[31m:\u001b[39m invalid decimal literal\n"
+     ]
+    }
+   ],
+   "source": [
+    "<!DOCTYPE html>\n",
+    "<html lang=\"it\">\n",
+    "<head>\n",
+    "  <meta charset=\"UTF-8\">\n",
+    "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n",
+    "  <title>Contatore Accessi</title>\n",
+    "\n",
+    "  <style>\n",
+    "    body {\n",
+    "      font-family: Arial, sans-serif;\n",
+    "      text-align: center;\n",
+    "      margin-top: 100px;\n",
+    "      background: #f5f5f5;\n",
+    "    }\n",
+    "\n",
+    "    a {\n",
+    "      display: inline-block;\n",
+    "      padding: 15px 25px;\n",
+    "      background: #007bff;\n",
+    "      color: white;\n",
+    "      text-decoration: none;\n",
+    "      border-radius: 10px;\n",
+    "      font-size: 22px;\n",
+    "    }\n",
+    "\n",
+    "    a:hover {\n",
+    "      background: #0056b3;\n",
+    "    }\n",
+    "\n",
+    "    #counter {\n",
+    "      margin-top: 25px;\n",
+    "      font-size: 30px;\n",
+    "      font-weight: bold;\n",
+    "    }\n",
+    "  </style>\n",
+    "</head>\n",
+    "\n",
+    "<body>\n",
+    "\n",
+    "  <a href=\"https://google.com\" target=\"_blank\" id=\"enterLink\">\n",
+    "    Entra\n",
+    "  </a>\n",
+    "\n",
+    "  <div id=\"counter\">Accessi: 0</div>\n",
+    "\n",
+    "  <script>\n",
+    "    // Recupera il contatore\n",
+    "    let count = localStorage.getItem(\"accessi\");\n",
+    "\n",
+    "    // Se non esiste parte da 0\n",
+    "    if (count === null) {\n",
+    "      count = 0;\n",
+    "    }\n",
+    "\n",
+    "    // Mostra subito il valore\n",
+    "    document.getElementById(\"counter\").innerText =\n",
+    "      \"Accessi: \" + count;\n",
+    "\n",
+    "    // Quando clicchi il link\n",
+    "    document.getElementById(\"enterLink\")\n",
+    "      .addEventListener(\"click\", function() {\n",
+    "\n",
+    "      // Incrementa\n",
+    "      count++;\n",
+    "\n",
+    "      // Salva\n",
+    "      localStorage.setItem(\"accessi\", count);\n",
+    "\n",
+    "      // Aggiorna testo\n",
+    "      document.getElementById(\"counter\").innerText =\n",
+    "        \"Accessi: \" + count;\n",
+    "    });\n",
+    "  </script>\n",
+    "\n",
+    "</body>\n",
+    "</html>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "275f7925-9989-4dc1-b309-00ed3cf61f62",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
